@@ -1,0 +1,82 @@
+.sidebar {
+   margin-bottom: 30px;
+   padding-bottom: 35px;
+}
+
+.sidebar-title {
+   margin: 0;
+   padding-bottom: 15px;
+   font-size: 14px;
+   font-weight: 400;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-family: "SVN-Avo";
+}
+
+.panel {
+   border: 1px solid #ddd;
+   font-family: "SVN-Avo";
+   margin-bottom: 10px;
+   &__heading {
+      position: relative;
+      cursor: pointer;
+      &:after {
+         content: '\002B';
+         color: $default-color;
+         font-weight: bold;
+         position: absolute;
+         top: 20%;
+         right: 10%;
+      }
+   }
+   &__title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: $font-size-defautl;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 10px;
+      letter-spacing: 1px;
+   }
+   .close-toggle {
+      display: none;
+   }
+   &__content {
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      border-top: none;
+      ul {
+         padding: 15px 15px 15px 30px;
+         li {
+            list-style: none;
+            margin-bottom: 5px;
+            a {
+               text-decoration: none;
+               color: $default-color;
+               font-size: $font-size-defautl;
+               font-family: "SVN-Avo";
+               transition: 0.3s;
+               &:hover {
+                  padding-left: 12px;
+                  color: rgb(185, 26, 26)
+               }
+            }
+         }
+      }
+   }
+}
+
+.active:after {
+   content: "\2212";
+}
+
+// .close-toggle {
+//    display: none;
+// }
+// .close-toggle.active {
+//    display: block;
+// }
+// .open-toggle.active {
+//    display: none;
+// }

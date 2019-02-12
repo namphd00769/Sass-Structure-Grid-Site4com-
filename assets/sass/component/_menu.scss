@@ -1,0 +1,145 @@
+      // -----------------PHAN MENU 
+      .menu {
+         font-family: "SVN-Avo";
+         &__main {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            ul {
+               margin-top: 0;
+               margin-bottom: 0;
+               padding-left: 0;
+               li {
+                  list-style: none;
+                  display: inline-block;
+                  padding: 0 20px;
+                  position: relative;
+                  a {
+                     text-decoration: none;
+                     color: $default-color;
+                     text-transform: uppercase;
+                     font-size: $font-size-defautl;
+                     display: inline-block;
+                     padding: 20px;
+                  }
+               }
+            }
+            .dropdown-menu {
+               left: auto;
+               right: auto;
+               li {
+                  display: block;
+                  padding: 0!important;
+                  transition: 0.4;
+                  &:hover {
+                     background: $default-color;
+                  }
+               }
+               a {
+                  text-transform: uppercase!important;
+                  font-size: 12px!important;
+                  padding: 10px 20px !important;
+                  &:hover {
+                     font-weight: 600;
+                     color: #fff;
+                  }
+               }
+               &__header {
+                  color: #777;
+                  font-family: "SVN-Avo-italic";
+                  font-size: 10px;
+                  padding-left: 20px;
+               }
+            }
+            .dropdown-slide {
+               position: static;
+            }
+         }
+         &__header {
+            display: none;
+         }
+         &__mobile {
+            display: none;
+         }
+      }
+      /*=================== Phần Reponsive ==================*/
+      
+      //------------- Show in tablet
+      @media (min-width: 768px) and (max-width: 991px) {
+         .menu {
+            &__main {
+               ul {
+                  li {
+                     a {
+                        font-size: 12px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      
+      @media (max-width: 767px) {
+         .menu {
+            &__main {
+               display: none;
+            }
+            &__header {
+               display: block;
+            }
+            &__mobile {
+               display: block;
+               transition: 0.3s;
+               width: 0;
+               margin-top: 0;
+               height: 100%;
+               position: fixed;
+               top: 0;
+               left: 0;
+               overflow-x: hidden;
+               z-index: 9999;
+               background: #fff;
+               >ul {
+                  margin-top: 100px;
+                  padding-left: 0;
+                  margin-bottom: 0;
+                  li {
+                     list-style: none;
+                     margin-bottom: 20px;
+                     text-align: center;
+                     a {
+                        text-decoration: none;
+                        color: $default-color;
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        cursor: pointer;
+                     }
+                  }
+               }
+               .closebtn {
+                  font-size: 40px;
+                  color: $default-color;
+                  display: inline-block;
+                  margin-bottom: 30px;
+                  position: absolute;
+                  top: 20px;
+                  right: 20px;
+                  &:hover {
+                     color: brown;
+                     cursor: pointer;
+                  }
+               }
+            }
+         }
+         .dropdown-menu {
+            position: static!important;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8px;
+            ul {
+               padding-left: 0;
+            }
+         }
+      }

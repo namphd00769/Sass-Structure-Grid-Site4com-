@@ -1,0 +1,581 @@
+      // Variables
+      @import "../assets/sass/helper/variable";
+      // Normalize
+      @import "../assets/sass/base/normalize";
+      // Typography
+      @import "../assets/sass/base/typography";
+      /* Page Layout */
+      
+      // Grid
+      @import "../assets/sass/layout/grid";
+      //header
+      @import "../assets/sass/layout/header";
+      // Component--> button, input fields, tag,nav
+      @import "../assets/sass/component/menu";
+      @import "../assets/sass/component/navigations";
+      @import "../assets/sass/component/form";
+      @import "../assets/sass/component/button";
+      //Phan Sidebar
+      @import "../assets/sass/layout/sidebar";
+      //slick
+      @import "../assets/sass/vendors/slick";
+      @import "../assets/sass/vendors/slick-theme";
+      // phan page rieng
+      @import "../assets/sass/page/index";
+      @import "../assets/sass/page/contact";
+      @import "../assets/sass/page/shop";
+      //footer
+      @import "../assets/sass/layout/footer";
+      //responsive
+      // @import "../assets/sass/responsive";
+      /*-----------Code Here--------------*/
+      
+      * {
+         box-sizing: border-box;
+      }
+      
+      body {
+         overflow-x: hidden;
+      }
+      
+      .separator {
+         height: 1px;
+         margin: 5px 0;
+         overflow: hidden;
+         background-color: #e5e5e5;
+         width: 100%;
+      }
+      
+      .disable {
+         color: #777;
+         font-family: "SVN-Avo";
+      }
+      
+      .bg-gray {
+         background: #f9f9f9;
+      }
+      
+      .dropdown-menu {
+         display: none;
+         opacity: 0;
+         position: absolute;
+         padding: 15px;
+         border: 1px solid #ebebeb;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+         left: auto;
+         right: 0;
+         transform: translateY(0px);
+         animation: moveUp linear 0.3s;
+         z-index: 1000;
+         background: #fff;
+      }
+      
+      .dropdown-slide {
+         position: relative;
+         &:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transition: .3s all
+         }
+      }
+      
+      .dropdown {
+         position: static;
+      }
+      
+      @keyframes moveUp {
+         0% {
+            transform: translateY(20px);
+            opacity: 0;
+         }
+         50% {
+            transform: translateY(10px);
+            opacity: 0.5;
+         }
+         100% {
+            transform: translateY(0px);
+            opacity: 1;
+         }
+      }
+      
+      .custom-select {
+         select {
+            border: none;
+         }
+      }
+      
+      .arrow-down {
+         &::after {
+            padding-left: 3px;
+            content: url('https://files.eliteprospects.com/layout/icon_expand.png');
+         }
+      }
+      
+      .position-staic {
+         position: static!important;
+      }
+      
+      .full-width {
+         left: 0!important;
+         right: 0!important;
+      }
+      
+      //------PHAN SLIDER 
+      .main-slider {
+         &__item {
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            background-position: center center;
+            &::after {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               height: 100%;
+               width: 100%;
+               opacity: 0.3;
+               background-color: $default-color;
+            }
+         }
+         &__caption {
+            z-index: 99;
+            color: #fff;
+            h4 {
+               margin-bottom: 40px;
+               letter-spacing: 2px;
+            }
+            h1 {
+               margin-bottom: 40px;
+               min-width: 439px;
+               max-width: 439px;
+               font-size: 36px;
+            }
+            a {
+               display: inline-block;
+               padding: 12px 20px;
+               border: 1px solid #fff;
+               color: #fff;
+               &:hover {
+                  background: #fff;
+                  color: $default-color;
+                  text-decoration: none;
+               }
+            }
+            &--left {
+               text-align: left;
+               position: absolute;
+               top: 40%;
+               left: 15%;
+            }
+            &--center {
+               text-align: center;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%)
+            }
+            &--right {
+               text-align: right;
+               position: absolute;
+               top: 40%;
+               right: 15%;
+            }
+         }
+      }
+      
+      //-----PHAN PRODUCT-CATEGORY
+      .product-category {
+         margin-top: 80px;
+         margin-bottom: 80px;
+         &__title {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $default-color;
+            padding: 10px 0px 30px 0px;
+            h2 {
+               font-family: "SVN-Avo";
+               font-size: 22px;
+               color: $default-color
+            }
+         }
+         &__box {
+            position: relative;
+            overflow: hidden;
+            min-height: 350px;
+            width: 100%;
+            margin-bottom: 30px;
+            a {
+               text-decoration: none;
+               color: $default-color;
+            }
+            img {
+               transition: all 0.3s ease-in-out;
+               &:hover {
+                  transform: scale(1.1);
+               }
+            }
+         }
+         &__content {
+            position: absolute;
+            top: 2%;
+            left: 5%;
+         }
+         h3 {
+            font-size: 16px;
+            font-family: "SVN-Avo-bold";
+         }
+         p {
+            letter-spacing: 2px;
+            font-size: 12px;
+            color: #757575;
+            font-family: "SVN-Avo"
+         }
+      }
+      
+      //-----PHAN PRODUCTS
+      .products {
+         padding-top: 80px;
+         padding-bottom: 80px;
+         &__title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            h2 {
+               color: $default-color;
+               font-family: "SVN-Avo";
+               font-size: 22px;
+            }
+         }
+         &__item {
+            margin-bottom: 30px;
+         }
+         &__thumb {
+            position: relative;
+            span {
+               position: absolute;
+               display: inline-block;
+               padding: 4px 12px;
+               color: #fff;
+               background: $default-color;
+               top: 12px;
+               right: 12px;
+               font-size: 12px;
+            }
+            &::before {
+               position: absolute;
+               background: $default-color;
+               opacity: 0;
+               top: 0;
+               left: 0;
+               bottom: 0;
+               right: 0;
+               height: 100%;
+               width: 100%;
+               content: '';
+               transition: .3s all;
+            }
+            &:hover::before {
+               opacity: 0.6;
+            }
+            .view-icons {
+               position: absolute;
+               opacity: 0;
+               transform: translateY(10px);
+               transition: 0.2s;
+               bottom: 0;
+               left: 0;
+               width: 100%;
+               ul {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  padding-left: 0;
+                  li {
+                     list-style: none;
+                     display: inline-block;
+                     a {
+                        font-size: 15px;
+                        transition: .2s all;
+                        padding: 10px;
+                        background: #fff;
+                        color: #000;
+                        display: inline-block;
+                        text-decoration: none;
+                        &:hover {
+                           color: #fff;
+                           background: #000
+                        }
+                     }
+                  }
+               }
+            }
+            &:hover .view-icons {
+               opacity: 1;
+               transform: translateY(-15px);
+            }
+         }
+         &__content {
+            font-family: "SVN-Avo";
+            h4 {
+               color: $default-color;
+               letter-spacing: 2px;
+               margin-top: 14px;
+               margin-bottom: 6px;
+               font-size: 16px;
+            }
+            p {
+               margin-bottom: 10px;
+               margin-top: 0;
+               color: #757575;
+            }
+         }
+      }
+      
+      //--- -----------------PHAN SUBSCRIBE
+      .subscribe {
+         background: #f9f9f9;
+         padding-top: 80px;
+         padding-bottom: 80px;
+         &__title {
+            font-family: "SVN-Avo";
+            padding: 20px 0 30px;
+            h2 {
+               color: $default-color;
+               font-size: 18px;
+               text-transform: uppercase;
+               letter-spacing: 2px;
+               margin-bottom: 10px;
+            }
+            p {
+               margin-top: 0;
+               margin-bottom: 10px;
+               color: #757575;
+               font-size: 15px;
+               line-height: 1.5;
+            }
+         }
+         &__form {
+            font-family: "SVN-Avo";
+            margin: auto;
+            input {
+               border: 1px solid #ccc;
+               color: #555;
+               padding: 10px;
+               font-size: 13px
+            }
+            input[type=text]:focus {
+               border: 1px solid #000;
+            }
+            button {
+               text-transform: uppercase;
+               background: #000;
+               color: #fff;
+               padding: 10px;
+               font-size: 12px;
+               border: none;
+               cursor: pointer;
+               letter-spacing: 0.5px;
+            }
+         }
+      }
+      
+      //---------------PHAN SECTIONS INSTAGRAMS
+      .instagram {
+         padding-top: 80px;
+         padding-bottom: 80px;
+         &__title {
+            padding: 20px 0 30px;
+            h2 {
+               letter-spacing: 2px;
+               font-family: "SVN-Avo";
+               font-size: 18px;
+               color: $default-color;
+               text-transform: uppercase;
+               margin-top: 20px;
+               margin-bottom: 10px;
+            }
+         }
+         img {
+            &:hover {
+               filter: grayscale(60%);
+            }
+         }
+      }
+      
+      // ------------------Phan Page-wrapper
+      .page-wrapper {
+         padding: 70px 0;
+         .page-contact {
+            &__info {
+               padding-left: 0px;
+               margin-top: 20px;
+               margin-bottom: 20px;
+               li {
+                  list-style: none;
+                  margin-bottom: 8px;
+                  span,
+                  a {
+                     text-decoration: none;
+                     color: $default-color;
+                     font-weight: 200;
+                     font-family: "SVN-Avo";
+                     font-size: $font-size-defautl;
+                  }
+                  i {
+                     margin-right: 10px;
+                     font-size: 12px;
+                  }
+               }
+            }
+            &__icon {
+               ul {
+                  padding-left: 0px;
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                  li {
+                     list-style: none;
+                     margin-right: 10px;
+                     display: inline-block;
+                     a {
+                        display: block;
+                        text-decoration: none;
+                        color: $default-color;
+                        height: 50px;
+                        width: 50px;
+                        text-align: center;
+                        border-radius: 50%;
+                        border: 1px solid $default-color;
+                        i {
+                           display: inline-block;
+                           line-height: 50px;
+                           margin: 0;
+                           font-size: $font-size-defautl;
+                        }
+                        &:hover {
+                           background: #000;
+                           color: #fff;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+      /*=================== Phần Reponsive ==================*/
+      
+      //------------- Show in tablet
+      @media (min-width: 768px) and (max-width: 991px) {
+         .main-slider {
+            &__caption {
+               &--left {
+                  top: 30%;
+                  left: 40%;
+               }
+               &--right {
+                  top: 30%;
+                  right: 25%;
+               }
+            }
+         }
+         .product-category {
+            margin-top: 40px;
+            margin-bottom: 40px;
+         }
+         .products {
+            padding-top: 40px;
+            padding-bottom: 40px;
+         }
+         .subscribe {
+            padding-top: 10px;
+            padding-bottom: 20px;
+         }
+         .instagram {
+            padding-bottom: 25px;
+            padding-top: 20px;
+            .grid {
+               &__column {
+                  &:nth-of-type(1) {
+                     margin-bottom: 25px;
+                  }
+                  &:nth-of-type(2) {
+                     margin-bottom: 25px;
+                  }
+               }
+            }
+         }
+      }
+      
+      //-----Show in Mobile
+      @media (max-width: 767px) {
+         .main-slider {
+            &__caption {
+               text-align: center;
+               h4 {
+                  margin-bottom: 20px;
+               }
+               h1 {
+                  max-width: 280px;
+                  min-width: 280px;
+                  font-size: 30px;
+               }
+            }
+         }
+         .product-category {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            &__title {
+               padding-bottom: 15px;
+               h2 {
+                  font-size: 18px;
+                  margin: 10px 0;
+               }
+            }
+         }
+         .products {
+            padding-top: 0px;
+            padding-bottom: 20px;
+            &__title {
+               padding-bottom: 15px;
+               h2 {
+                  font-size: 18px;
+                  margin: 10px 0;
+               }
+            }
+         }
+         .subscribe {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            &__title {
+               padding: 0px 0 15px;
+               h2 {
+                  font-size: 16px;
+               }
+               p {
+                  font-size: 13px;
+               }
+            }
+            &__form {
+               width: 90%;
+            }
+         }
+         .instagram {
+            padding-bottom: 20px;
+            padding-top: 20px;
+            &__title {
+               padding-bottom: 15px;
+               h2 {
+                  font-size: 18px;
+                  margin: 10px 0;
+               }
+            }
+            .grid {
+               &__column {
+                  margin-bottom: 10px;
+               }
+            }
+         }
+      }

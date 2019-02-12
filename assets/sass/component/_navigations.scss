@@ -1,0 +1,38 @@
+//-----------Phan Navigation
+.nav {
+   background: $bg-color-grey;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border-bottom: none;
+   padding: 30px 0;
+   &__content {
+      h1 {
+         color: $default-color;
+         font-family: "SVN-Avo";
+         font-size: 36px;
+         font-weight: 200;
+         margin: 0 0 6px 0;
+      }
+      ul {
+         padding-left: 0px;
+         padding: 5px;
+         margin: 8px 0;
+         li {
+            list-style: none;
+            font-weight: 200;
+            display: inline-block;
+            a {
+               color: $default-color;
+               font-family: "SVN-Avo";
+               text-decoration: none;
+               font-size: 13px;
+            }
+         }
+      }
+      .disable::before {
+         padding: 0 5px;
+         color: #ccc;
+         content: "/\00a0"
+      }
+   }
+}

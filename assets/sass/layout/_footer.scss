@@ -1,0 +1,86 @@
+      //------FOOTER
+      .footer {
+         background: #f9f9f9;
+         padding: 50px 0;
+         &__social {
+            ul {
+               margin-top: 0;
+               margin-bottom: 0;
+               padding-left: 0px;
+               li {
+                  display: inline-block;
+                  padding: 0 10px;
+                  list-style: none;
+                  a {
+                     text-decoration: none;
+                     color: $default-color;
+                  }
+               }
+            }
+         }
+         &__menu {
+            margin-top: 30px;
+            ul {
+               margin-top: 0;
+               margin-bottom: 0;
+               padding-left: 0px;
+               li {
+                  display: inline-block;
+                  padding: 0 8px;
+                  list-style: none;
+                  a {
+                     text-decoration: none;
+                     color: $default-color;
+                     text-transform: uppercase;
+                     font-size: $font-size-defautl;
+                     font-family: "SVN-Avo";
+                     color: #757575;
+                     &:hover {
+                        color: #000;
+                     }
+                  }
+               }
+            }
+         }
+         &__copyright {
+            p {
+               font-family: "SVN-Avo-bold";
+               color: #757575;
+               font-size: $font-size-defautl;
+            }
+         }
+      }
+      /*=================== Phần Reponsive ==================*/
+      
+      //------------- Show in tablet
+      @media (min-width: 768px) and (max-width: 991px) {
+         .footer {
+            padding-bottom: 25px;
+            padding-top: 25px;
+            &__menu {
+               ul {
+                  li {
+                     a {
+                        font-size: 12px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      
+      //-----Show in Mobile
+      @media (max-width: 767px) {
+         .footer {
+            &__menu {
+               margin-top: 15px;
+               ul {
+                  li {
+                     a {
+                        font-size: 11px;
+                     }
+                  }
+               }
+            }
+         }
+      }

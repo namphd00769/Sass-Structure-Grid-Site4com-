@@ -1,0 +1,54 @@
+//------>Phan Form
+form {
+   font-family: "SVN-Avo";
+   .form-group {
+      margin-bottom: 15px;
+   }
+   input {
+      box-shadow: none;
+      border-radius: 0;
+      display: block;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #555;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      font-family: "SVN-Avo";
+      background-color: transparent;
+      height: 45px;
+      width: 100%;
+      padding: 6px 12px;
+      &:hover {
+         border-color: rgb(0, 0, 0);
+      }
+   }
+    ::placeholder {
+      font-size: $font-size-defautl;
+      font-weight: 200;
+   }
+   textarea {
+      padding: 10px;
+      height: 120px;
+      background-color: transparent;
+      border: 1px solid #dedede;
+      width: 100%;
+      &:hover {
+         border-color: #000;
+      }
+   }
+   & #contact-submit {
+      cursor: pointer;
+      background: $default-color;
+      color: #fff;
+      padding: 15px 0;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border: none;
+      transition: 0.3s;
+      &:hover {
+         background: #221919;
+      }
+   }
+}
